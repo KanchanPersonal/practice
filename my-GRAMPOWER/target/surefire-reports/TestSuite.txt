@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 28.35 s <<< FAILURE! - in TestSuite
+GRAMPOWER.App.testLogin  Time elapsed: 20.453 s  <<< FAILURE!
+java.lang.AssertionError: expected [Gram Power] but found []
+	at GRAMPOWER.App.testLogin(App.java:38)
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Test Suite]">
+  <test thread-count="5" verbose="0" name="Selenium Test(failed)">
+    <classes>
+      <class name="GRAMPOWER.App">
+        <methods>
+          <include name="setUp"/>
+          <include name="testLogin"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- GRAMPOWER.App -->
+    </classes>
+  </test> <!-- Selenium Test(failed) -->
+</suite> <!-- Failed suite [Test Suite] -->
