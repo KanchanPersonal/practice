@@ -117,10 +117,12 @@ By mapElementLocator = By.xpath("//div[@title='5.0.176.60 : A_1306']");
 wait.until(ExpectedConditions.presenceOfElementLocated(mapElementLocator));
      WebElement realtime = driver.findElement(By.xpath("//a[text()='Realtime']"));
     realtime.click();
-    WebElement graphBar = driver.findElement(By.xpath("//div[@aria-label='A chart.']/div/table"));
+    List <WebElement> graphBar = driver.findElements(By.xpath("//*[local-name()='svg' ]//*[name()='g' and @clip-path = 'url(https://data.grampower.com/hes/#_ABSTRACT_RENDERER_ID_0)']//*[name()='rect']"));
 Actions builder = new Actions(driver);
-builder.moveToElement(graphBar).perform();
-Thread.sleep(2000); 
+for(WebElement element : graphBar) {
+    builder.moveToElement(element).perform();
+    Thread.sleep(500);
+}
 WebElement tooltip = driver.findElement(By.xpath("//your-xpath-for-tooltip"));
 String graphValue = tooltip.getText();
 // Retrieve the value from the table column
